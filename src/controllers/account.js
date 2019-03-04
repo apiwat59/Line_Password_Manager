@@ -11,6 +11,7 @@ const {
 } = require('../constants')
 
 const account = async (req, res) => {
+  console.log('============>')
   try {
     const cmd = await getCommandDocument()
     let commandStr = cmd.command
