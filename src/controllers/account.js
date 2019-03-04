@@ -11,7 +11,6 @@ const {
 } = require('../constants')
 
 const account = async (req, res) => {
-  console.log('============>')
   try {
     const cmd = await getCommandDocument()
     let commandStr = cmd.command
@@ -152,11 +151,13 @@ const account = async (req, res) => {
       }
     }
 
-    res.sendStatus(200)
+    // res.sendStatus(200)
+    res.statusCode = 200
     res.send('success')
   } catch (e) {
     console.log(e)
-    res.sendStatus(200)
+    // res.sendStatus(200)
+    res.statusCode = 200
     res.send('success')
   }
 }
