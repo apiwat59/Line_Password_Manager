@@ -5,7 +5,10 @@ const {
 
 let firestore = new Firestore({
   projectId: FIREBASE.PROJECT_ID,
-  keyFilename: FIREBASE.KEY_PATH
+  credentials: {
+    "private_key": process.env.private_key.replace(/\\n/g, '\n'),
+    "client_email": process.env.client_email
+  }
 })
 
 module.exports = {
