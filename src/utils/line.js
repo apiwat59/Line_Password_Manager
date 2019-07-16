@@ -4,7 +4,8 @@ const fs = require('fs')
 const {
   LINE_TOKEN,
   LINE_API,
-  FILE_PATH
+  FILE_PATH,
+  FILE_SERVER
 } = require('../constants')
 
 function sendReplyBodyToLine(replyToken, body) {
@@ -31,9 +32,13 @@ function sendTextReplyToLine(replyToken, text) {
 }
 
 const getContent = messageID => {
-  download(`${LINE_API}/${messageID}/content`, `${new Date().toISOString()}.jpg`, () => {
-    console.log('done');
-  });
+  request({
+    method: 'GET',
+    uri: `${FILE_SERVER}/${messageID}`
+  })
+  // download(`${LINE_API}/${messageID}/content`, `${new Date().toISOString()}.jpg`, () => {
+  //   console.log('done');
+  // });
 }
 
 const getUserProfile = (userID, replyToken) => {

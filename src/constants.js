@@ -12,5 +12,6 @@ module.exports = {
     CONFIRM: 'คุณยืนยันทำรายการหรือไม่',
     DELETE: 'ลบ {name} เรียบร้อยแล้ว'
   },
-  FILE_PATH: process.env.FILE_PATH || '/tmp'
+  FILE_PATH: process.env.FILE_PATH || '/tmp',
+  FILE_SERVER: process.env.FILE_SERVER
 }
