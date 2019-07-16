@@ -5,7 +5,8 @@ const {
   LINE_TOKEN,
   LINE_API,
   FILE_PATH,
-  FILE_SERVER
+  FILE_SERVER,
+  LINE_PROFILE
 } = require('../constants')
 
 function sendReplyBodyToLine(replyToken, body) {
