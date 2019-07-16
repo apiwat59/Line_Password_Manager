@@ -13,5 +13,6 @@ module.exports = {
     DELETE: 'ลบ {name} เรียบร้อยแล้ว'
   },
   FILE_PATH: process.env.FILE_PATH || '/tmp',
-  FILE_SERVER: process.env.FILE_SERVER
+  FILE_SERVER: process.env.FILE_SERVER,
+  LINE_PROFILE: 'https://api.line.me/v2/bot/profile',
 }
